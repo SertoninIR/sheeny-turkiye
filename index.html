@@ -298,32 +298,63 @@
 <section id="experience" class="py-24 bg-white overflow-hidden">
     <div class="max-w-7xl mx-auto px-6">
         <div class="flex flex-col lg:flex-row gap-16 items-center">
-            <div class="lg:w-1/2 reveal">
-                <div class="grid grid-cols-2 gap-4 md:gap-6">
+            
+            <!-- LEFT SIDE: NEW LUXURY PHOTO GRID -->
+            <div class="lg:w-1/2 reveal relative">
+                <!-- Floating Center Badge -->
+                <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-20 bg-brand-dark/90 backdrop-blur-xl border border-white/20 p-4 rounded-[30px] shadow-2xl flex flex-col items-center justify-center text-center w-36 h-36 animate-float">
+                    <i data-lucide="award" class="w-8 h-8 text-brand-gold mb-2"></i>
+                    <span class="text-white text-[10px] font-bold uppercase tracking-[0.2em] leading-tight"><span class="en-inline">All<br>Inclusive<br>Luxury</span><span class="ar-inline">فخامة<br>شاملة<br>كلياً</span></span>
+                </div>
+
+                <div class="grid grid-cols-12 gap-4 md:gap-5">
                     <!-- Left Column -->
-                    <div class="space-y-4 md:space-y-6">
-                        <div class="relative rounded-[30px] md:rounded-[40px] overflow-hidden shadow-2xl h-48 md:h-64 group">
-                            <img src="https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?q=80&w=800&auto=format&fit=crop" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" alt="VIP Transfer">
-                            <div class="absolute inset-0 bg-brand-dark/20 group-hover:bg-transparent transition-colors"></div>
+                    <div class="col-span-5 space-y-4 md:space-y-5 pt-8 md:pt-12">
+                        <!-- VIP Transfer -->
+                        <div class="relative rounded-[30px] overflow-hidden shadow-2xl h-48 md:h-56 group">
+                            <img src="https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?q=80&w=800&auto=format&fit=crop" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-1000" alt="VIP Chauffeur">
+                            <div class="absolute inset-0 bg-gradient-to-t from-brand-dark/90 via-brand-dark/20 to-transparent opacity-80 group-hover:opacity-100 transition-opacity"></div>
+                            <div class="absolute bottom-5 left-5 right-5 translate-y-2 group-hover:translate-y-0 transition-transform duration-500">
+                                <span class="text-brand-gold text-[9px] font-bold uppercase tracking-widest block mb-1">Transit</span>
+                                <span class="text-white text-xs font-bold shadow-sm">VIP Chauffeur</span>
+                            </div>
                         </div>
-                        <div class="relative rounded-[30px] md:rounded-[40px] overflow-hidden shadow-2xl h-64 md:h-80 group">
-                            <img src="https://images.unsplash.com/photo-1541432901042-2d8bd64b4a9b?q=80&w=800&auto=format&fit=crop" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" alt="Istanbul Tour">
-                            <div class="absolute inset-0 bg-brand-dark/20 group-hover:bg-transparent transition-colors"></div>
+                        <!-- 5-Star Hotel -->
+                        <div class="relative rounded-[30px] overflow-hidden shadow-2xl h-64 md:h-80 group">
+                            <img src="https://images.unsplash.com/photo-1582719478250-c89afe4dc68b?q=80&w=800&auto=format&fit=crop" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-1000" alt="Luxury Hotel Suite">
+                            <div class="absolute inset-0 bg-gradient-to-t from-brand-dark/90 via-brand-dark/20 to-transparent opacity-80 group-hover:opacity-100 transition-opacity"></div>
+                            <div class="absolute bottom-5 left-5 right-5 translate-y-2 group-hover:translate-y-0 transition-transform duration-500">
+                                <span class="text-brand-gold text-[9px] font-bold uppercase tracking-widest block mb-1">Accommodation</span>
+                                <span class="text-white text-xs font-bold shadow-sm">5-Star Retreats</span>
+                            </div>
                         </div>
                     </div>
+                    
                     <!-- Right Column (Staggered) -->
-                    <div class="space-y-4 md:space-y-6 pt-8 md:pt-16">
-                        <div class="relative rounded-[30px] md:rounded-[40px] overflow-hidden shadow-2xl h-64 md:h-80 group">
-                            <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?q=80&w=800&auto=format&fit=crop" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" alt="Luxury Hotel">
-                            <div class="absolute inset-0 bg-brand-dark/20 group-hover:bg-transparent transition-colors"></div>
+                    <div class="col-span-7 space-y-4 md:space-y-5">
+                        <!-- Cappadocia -->
+                        <div class="relative rounded-[30px] overflow-hidden shadow-2xl h-64 md:h-72 group">
+                            <img src="https://images.unsplash.com/photo-1527838832700-5059252407fa?q=80&w=800&auto=format&fit=crop" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-1000" alt="Cappadocia Turkey Tour">
+                            <div class="absolute inset-0 bg-gradient-to-t from-brand-dark/90 via-brand-dark/20 to-transparent opacity-80 group-hover:opacity-100 transition-opacity"></div>
+                            <div class="absolute bottom-5 left-5 right-5 translate-y-2 group-hover:translate-y-0 transition-transform duration-500">
+                                <span class="text-brand-gold text-[9px] font-bold uppercase tracking-widest block mb-1">Excursions</span>
+                                <span class="text-white text-sm font-bold shadow-sm">Cappadocia Tours</span>
+                            </div>
                         </div>
-                        <div class="relative rounded-[30px] md:rounded-[40px] overflow-hidden shadow-2xl h-48 md:h-64 group">
-                            <img src="https://images.unsplash.com/photo-1507501336603-31310759f6d8?q=80&w=800&auto=format&fit=crop" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" alt="Turkey Tour">
-                            <div class="absolute inset-0 bg-brand-dark/20 group-hover:bg-transparent transition-colors"></div>
+                        <!-- Istanbul -->
+                        <div class="relative rounded-[30px] overflow-hidden shadow-2xl h-48 md:h-64 group">
+                            <img src="https://images.unsplash.com/photo-1541432901042-2d8bd64b4a9b?q=80&w=800&auto=format&fit=crop" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-1000" alt="Istanbul Tour">
+                            <div class="absolute inset-0 bg-gradient-to-t from-brand-dark/90 via-brand-dark/20 to-transparent opacity-80 group-hover:opacity-100 transition-opacity"></div>
+                            <div class="absolute bottom-5 left-5 right-5 translate-y-2 group-hover:translate-y-0 transition-transform duration-500">
+                                <span class="text-brand-gold text-[9px] font-bold uppercase tracking-widest block mb-1">Sightseeing</span>
+                                <span class="text-white text-sm font-bold shadow-sm">Heart of Istanbul</span>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
+
+            <!-- RIGHT SIDE: TEXT -->
             <div class="lg:w-1/2 reveal" style="transition-delay: 200ms;">
                 <span class="text-brand-gold font-bold tracking-[0.3em] uppercase text-xs mb-4 block"><span class="en-inline">Medical Luxury</span><span class="ar-inline">فخامة طبية</span></span>
                 <h2 class="font-serif text-4xl md:text-5xl font-bold text-brand-dark mb-8 leading-tight"><span class="en-text">Your Stay in <br><span class="italic font-light">The Heart of Byzantium</span></span><span class="ar-text">إقامتك في <br><span class="italic font-light">قلب بيزنطة</span></span></h2>
