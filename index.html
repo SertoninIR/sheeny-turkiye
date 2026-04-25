@@ -468,25 +468,29 @@
             </div>
             
             <div class="md:w-3/5 p-12 bg-white" id="formContainer">
-                <form id="contactForm" onsubmit="handleForm(event)" class="space-y-5">
+                <form id="contactForm" onsubmit="handleForm(event, 'contact')" class="space-y-5">
                     <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
-                        <input type="text" required placeholder="Name / الاسم" class="w-full bg-gray-50 border border-gray-200 rounded-xl px-4 py-3 text-brand-dark focus:border-brand-gold outline-none">
-                        <input type="tel" required placeholder="WhatsApp / واتساب" class="w-full bg-gray-50 border border-gray-200 rounded-xl px-4 py-3 text-brand-dark focus:border-brand-gold outline-none">
+                        <input type="text" id="contactName" required placeholder="Name / الاسم" class="w-full bg-gray-50 border border-gray-200 rounded-xl px-4 py-3 text-brand-dark focus:border-brand-gold outline-none">
+                        <input type="tel" id="contactPhone" required placeholder="WhatsApp / واتساب" class="w-full bg-gray-50 border border-gray-200 rounded-xl px-4 py-3 text-brand-dark focus:border-brand-gold outline-none">
                     </div>
-                    <input type="email" required placeholder="Email / البريد الإلكتروني" class="w-full bg-gray-50 border border-gray-200 rounded-xl px-4 py-3 text-brand-dark focus:border-brand-gold outline-none">
-                    <select required class="w-full bg-gray-50 border border-gray-200 rounded-xl px-4 py-3 text-gray-500 focus:border-brand-gold outline-none">
-                        <option value="">Treatment / العلاج</option>
-                        <option>Hollywood Smile / ابتسامة هوليوود</option>
-                        <option>Implant / زراعة</option>
-                        <option>Orthodontics / تقويم الأسنان</option>
-                    </select>
-                    <textarea rows="3" placeholder="Problem Explanation / شرح الحالة" class="w-full bg-gray-50 border border-gray-200 rounded-xl px-4 py-3 text-brand-dark focus:border-brand-gold outline-none"></textarea>
+                    <input type="email" id="contactEmail" required placeholder="Email / البريد الإلكتروني" class="w-full bg-gray-50 border border-gray-200 rounded-xl px-4 py-3 text-brand-dark focus:border-brand-gold outline-none">
+                    <div>
+                        <select id="contactTreatment" onchange="toggleOtherInput('contactTreatment', 'contactOtherTreatment')" required class="w-full bg-gray-50 border border-gray-200 rounded-xl px-4 py-3 text-gray-500 focus:border-brand-gold outline-none">
+                            <option value="">Treatment / العلاج</option>
+                            <option value="Hollywood Smile">Hollywood Smile / ابتسامة هوليوود</option>
+                            <option value="Implant">Implant / زراعة</option>
+                            <option value="Orthodontics">Orthodontics / تقويم الأسنان</option>
+                            <option value="Other">Other / أخرى (حدد أدناه)</option>
+                        </select>
+                        <input type="text" id="contactOtherTreatment" placeholder="Please specify your treatment / يرجى تحديد العلاج" class="hidden w-full bg-gray-50 border border-gray-200 rounded-xl px-4 py-3 text-brand-dark focus:border-brand-gold outline-none mt-4 transition-all">
+                    </div>
+                    <textarea id="contactProblem" rows="3" placeholder="Problem Explanation / شرح الحالة" class="w-full bg-gray-50 border border-gray-200 rounded-xl px-4 py-3 text-brand-dark focus:border-brand-gold outline-none"></textarea>
                     <button type="submit" class="w-full py-4 gold-gradient rounded-xl font-bold text-brand-dark uppercase tracking-widest hover:brightness-110 active:scale-[0.98] transition-all shadow-lg shadow-brand-gold/20"><span class="en-inline">Send Inquiry</span><span class="ar-inline">إرسال الطلب</span></button>
                 </form>
                 <div id="successMsg" class="hidden text-center py-10">
                     <div class="w-20 h-20 bg-brand-gold rounded-full flex items-center justify-center mx-auto mb-6"><i data-lucide="check" class="w-10 h-10 text-brand-dark"></i></div>
                     <h4 class="text-2xl text-brand-dark font-bold mb-2"><span class="en-inline">Thank You!</span><span class="ar-inline">شكرًا لك!</span></h4>
-                    <p class="text-gray-500"><span class="en-text">Our coordinator will reach out shortly.</span><span class="ar-text">سيتواصل معك منسقنا قريبًا.</span></p>
+                    <p class="text-gray-500"><span class="en-text">We are redirecting you to WhatsApp...</span><span class="ar-text">نقوم بتوجيهك إلى واتساب...</span></p>
                 </div>
             </div>
         </div>
@@ -605,37 +609,44 @@
     <div class="fixed inset-0 bg-brand-dark/95 backdrop-blur-md" onclick="closeModal()"></div>
     <div class="relative bg-white max-w-xl mx-auto rounded-[40px] overflow-hidden shadow-3xl transform transition-all animate-fade-in-up">
         <button onclick="closeModal()" class="absolute top-6 right-6 text-gray-400 hover:text-brand-dark transition-colors"><i data-lucide="x" class="w-6 h-6"></i></button>
-        <div class="p-8 sm:p-12">
+        <div class="p-8 sm:p-12" id="modalFormContainer">
             <h3 class="font-serif text-3xl font-bold text-brand-dark mb-4"><span class="en-inline">Plan Your Journey</span><span class="ar-inline">خطط لرحلتك</span></h3>
             <p class="text-gray-500 mb-8"><span class="en-inline">Send your details for a private consultation.</span><span class="ar-inline">أرسل بياناتك للحصول على استشارة خاصة.</span></p>
-            <form onsubmit="event.preventDefault(); alert('Request sent!'); closeModal();" class="space-y-5 text-left">
+            <form id="modalForm" onsubmit="handleForm(event, 'modal')" class="space-y-5 text-left">
                 <div>
                     <label class="block text-[10px] uppercase tracking-widest font-bold text-gray-400 mb-2"><span class="en-inline">Name</span><span class="ar-inline text-right block">الاسم</span></label>
-                    <input type="text" required class="w-full bg-gray-50 border border-gray-100 rounded-2xl px-5 py-3 outline-none focus:border-brand-gold">
+                    <input type="text" id="modalName" required class="w-full bg-gray-50 border border-gray-100 rounded-2xl px-5 py-3 outline-none focus:border-brand-gold">
                 </div>
                 <div>
                     <label class="block text-[10px] uppercase tracking-widest font-bold text-gray-400 mb-2"><span class="en-inline">WhatsApp</span><span class="ar-inline text-right block">واتساب</span></label>
-                    <input type="tel" required class="w-full bg-gray-50 border border-gray-100 rounded-2xl px-5 py-3 outline-none focus:border-brand-gold">
+                    <input type="tel" id="modalPhone" required class="w-full bg-gray-50 border border-gray-100 rounded-2xl px-5 py-3 outline-none focus:border-brand-gold">
                 </div>
                 <div>
                     <label class="block text-[10px] uppercase tracking-widest font-bold text-gray-400 mb-2"><span class="en-inline">Email Address</span><span class="ar-inline text-right block">البريد الإلكتروني</span></label>
-                    <input type="email" required class="w-full bg-gray-50 border border-gray-100 rounded-2xl px-5 py-3 outline-none focus:border-brand-gold">
+                    <input type="email" id="modalEmail" required class="w-full bg-gray-50 border border-gray-100 rounded-2xl px-5 py-3 outline-none focus:border-brand-gold">
                 </div>
                 <div>
                     <label class="block text-[10px] uppercase tracking-widest font-bold text-gray-400 mb-2"><span class="en-inline">Treatment</span><span class="ar-inline text-right block">العلاج</span></label>
-                    <select required class="w-full bg-gray-50 border border-gray-100 rounded-2xl px-5 py-3 outline-none focus:border-brand-gold text-gray-700">
+                    <select id="modalTreatment" onchange="toggleOtherInput('modalTreatment', 'modalOtherTreatment')" required class="w-full bg-gray-50 border border-gray-100 rounded-2xl px-5 py-3 outline-none focus:border-brand-gold text-gray-700">
                         <option value="">-- Select --</option>
-                        <option>Hollywood Smile / ابتسامة هوليوود</option>
-                        <option>Implant / زراعة</option>
-                        <option>Orthodontics / تقويم الأسنان</option>
+                        <option value="Hollywood Smile">Hollywood Smile / ابتسامة هوليوود</option>
+                        <option value="Implant">Implant / زراعة</option>
+                        <option value="Orthodontics">Orthodontics / تقويم الأسنان</option>
+                        <option value="Other">Other / أخرى (حدد أدناه)</option>
                     </select>
+                    <input type="text" id="modalOtherTreatment" placeholder="Please specify your treatment / يرجى تحديد العلاج" class="hidden w-full bg-gray-50 border border-gray-100 rounded-2xl px-5 py-3 outline-none focus:border-brand-gold mt-4 transition-all">
                 </div>
                 <div>
                     <label class="block text-[10px] uppercase tracking-widest font-bold text-gray-400 mb-2"><span class="en-inline">Problem Explanation</span><span class="ar-inline text-right block">شرح الحالة / المشكلة</span></label>
-                    <textarea rows="3" placeholder="Tell us about your dental needs... / أخبرنا عن احتياجاتك..." class="w-full bg-gray-50 border border-gray-100 rounded-2xl px-5 py-3 outline-none focus:border-brand-gold"></textarea>
+                    <textarea id="modalProblem" rows="3" placeholder="Tell us about your dental needs... / أخبرنا عن احتياجاتك..." class="w-full bg-gray-50 border border-gray-100 rounded-2xl px-5 py-3 outline-none focus:border-brand-gold"></textarea>
                 </div>
                 <button type="submit" class="w-full gold-gradient py-5 rounded-2xl font-bold text-brand-dark uppercase tracking-widest shadow-lg shadow-brand-gold/20 hover:scale-[1.02] active:scale-95 transition-all"><span class="en-inline">Request Assessment</span><span class="ar-inline">اطلب تقييمًا</span></button>
             </form>
+            <div id="modalSuccessMsg" class="hidden text-center py-10">
+                <div class="w-20 h-20 bg-brand-gold rounded-full flex items-center justify-center mx-auto mb-6"><i data-lucide="check" class="w-10 h-10 text-brand-dark"></i></div>
+                <h4 class="text-2xl text-brand-dark font-bold mb-2"><span class="en-inline">Thank You!</span><span class="ar-inline">شكرًا لك!</span></h4>
+                <p class="text-gray-500"><span class="en-text">We are redirecting you to WhatsApp...</span><span class="ar-text">نقوم بتوجيهك إلى واتساب...</span></p>
+            </div>
         </div>
     </div>
 </div>
@@ -663,6 +674,7 @@
     }
     function openModal() { document.getElementById('modal').classList.remove('hidden'); document.body.style.overflow = 'hidden'; }
     function closeModal() { document.getElementById('modal').classList.add('hidden'); document.body.style.overflow = 'auto'; }
+    
     function setLang(lang) {
         const body = document.body;
         const html = document.documentElement;
@@ -681,10 +693,62 @@
         }
         lucide.createIcons();
     }
-    function handleForm(e) {
+
+    // Toggle Other Input Field
+    function toggleOtherInput(selectId, inputId) {
+        const selectBox = document.getElementById(selectId);
+        const otherInput = document.getElementById(inputId);
+        if (selectBox.value === 'Other') {
+            otherInput.classList.remove('hidden');
+            otherInput.required = true;
+        } else {
+            otherInput.classList.add('hidden');
+            otherInput.required = false;
+            otherInput.value = '';
+        }
+    }
+
+    // Handle Form Submission via WhatsApp Redirection
+    function handleForm(e, formType) {
         e.preventDefault();
-        document.getElementById('contactForm').classList.add('hidden');
-        document.getElementById('successMsg').classList.remove('hidden');
+        
+        let name, phone, email, treatment, problem, formElement, successElement;
+
+        // Get data based on which form was submitted
+        if (formType === 'modal') {
+            name = document.getElementById('modalName').value;
+            phone = document.getElementById('modalPhone').value;
+            email = document.getElementById('modalEmail').value;
+            treatment = document.getElementById('modalTreatment').value;
+            if (treatment === 'Other') treatment = document.getElementById('modalOtherTreatment').value;
+            problem = document.getElementById('modalProblem').value || 'No additional notes provided.';
+            
+            formElement = document.getElementById('modalForm');
+            successElement = document.getElementById('modalSuccessMsg');
+        } else {
+            name = document.getElementById('contactName').value;
+            phone = document.getElementById('contactPhone').value;
+            email = document.getElementById('contactEmail').value;
+            treatment = document.getElementById('contactTreatment').value;
+            if (treatment === 'Other') treatment = document.getElementById('contactOtherTreatment').value;
+            problem = document.getElementById('contactProblem').value || 'No additional notes provided.';
+            
+            formElement = document.getElementById('contactForm');
+            successElement = document.getElementById('successMsg');
+        }
+
+        // Format the message for WhatsApp
+        const waMessage = `*New Website Inquiry*\n\n*Name:* ${name}\n*WhatsApp:* ${phone}\n*Email:* ${email}\n*Treatment:* ${treatment}\n*Notes:* ${problem}`;
+        
+        // WhatsApp API URL (Using your number: 989391931427)
+        const waUrl = `https://wa.me/989391931427?text=${encodeURIComponent(waMessage)}`;
+
+        // Open WhatsApp Web/App in a new tab
+        window.open(waUrl, '_blank');
+
+        // Hide form and show success message
+        formElement.classList.add('hidden');
+        successElement.classList.remove('hidden');
     }
 </script>
 </body>
