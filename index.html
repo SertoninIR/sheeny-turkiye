@@ -148,7 +148,7 @@
     </div>
 
     <div class="relative z-20 text-center lg:text-left px-6 max-w-7xl mx-auto w-full grid lg:grid-cols-2">
-        <div class="max-w-2xl pt-20 lg:pt-0">
+        <div class="max-w-2xl pt-36 lg:pt-12 relative z-30">
             <div class="inline-flex items-center gap-2 bg-white/10 backdrop-blur-md px-4 py-2 rounded-full border border-white/20 mb-8 animate-fade-in">
                 <span class="w-2 h-2 rounded-full bg-brand-gold animate-ping"></span>
                 <span class="text-white text-[10px] md:text-xs font-bold tracking-[0.3em] uppercase">
@@ -156,7 +156,7 @@
                 </span>
             </div>
             
-            <h1 class="font-serif text-5xl md:text-7xl lg:text-8xl text-white font-bold leading-[1.1] mb-8">
+            <h1 class="font-serif text-5xl md:text-7xl lg:text-8xl text-white font-bold leading-[1.1] mb-8 relative z-30 drop-shadow-lg">
                 <span class="en-text">The Art of <br><span class="gold-text-gradient italic font-light">The Perfect Smile</span></span>
                 <span class="ar-text" style="line-height: 1.3;">فن <br><span class="gold-text-gradient italic font-light">الابتسامة المثالية</span></span>
             </h1>
@@ -204,12 +204,12 @@
         <div class="grid lg:grid-cols-2 gap-16 items-center">
             <div class="reveal">
                 <h2 class="font-serif text-4xl md:text-5xl font-bold text-brand-dark mb-6 leading-tight">
-                    <span class="en-text">Real Patients. <br><span class="text-brand-gold italic">Grounded Results.</span></span>
-                    <span class="ar-text">مرضى حقيقيون. <br><span class="text-brand-gold italic">نتائج واقعية.</span></span>
+                    <span class="en-text">Real Patients. <br><span class="text-brand-gold italic">Life-Changing Results.</span></span>
+                    <span class="ar-text">مرضى حقيقيون. <br><span class="text-brand-gold italic">نتائج تغير الحياة.</span></span>
                 </h2>
                 <p class="text-gray-600 text-lg mb-8 leading-relaxed">
-                    <span class="en-text">Our results speak for themselves. We don't just fix teeth; we rebuild self-esteem using the latest digital smile design technology.</span>
-                    <span class="ar-text">نتائجنا تتحدث عن نفسها. نحن لا نقوم فقط بإصلاح الأسنان، بل نعيد بناء الثقة بالنفس باستخدام أحدث تقنيات تصميم الابتسامة الرقمية.</span>
+                    <span class="en-text">Our results speak for themselves. We don't just fix teeth; we rebuild self-esteem using the latest digital smile design technology to give you a flawless, natural look.</span>
+                    <span class="ar-text">نتائجنا تتحدث عن نفسها. نحن لا نقوم فقط بإصلاح الأسنان، بل نعيد بناء الثقة بالنفس باستخدام أحدث تقنيات تصميم الابتسامة الرقمية للحصول على مظهر طبيعي مثالي.</span>
                 </p>
                 <div class="grid grid-cols-2 gap-6">
                     <div class="p-6 bg-white rounded-3xl shadow-sm border border-gray-100">
@@ -223,21 +223,134 @@
                 </div>
             </div>
 
-            <div class="relative reveal group" style="transition-delay: 200ms;">
-                <div class="slider-container shadow-2xl">
-                    <img src="https://images.unsplash.com/photo-1599834566382-c427845325b9?q=80&w=1200&auto=format&fit=crop" class="slider-image" alt="After Treatment">
-                    <div class="slider-image slider-before overflow-hidden" id="beforeImage">
-                        <img src="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?q=80&w=1200&auto=format&fit=crop" class="w-[200%] h-full object-cover max-w-none filter grayscale sepia-[0.3]" alt="Before Treatment">
+            <!-- NEW PATIENT EXPERIENCES GALLERY (Replaces Before/After) -->
+            <div class="reveal relative" style="transition-delay: 200ms;">
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 relative z-10 items-center">
+                    
+                    <!-- Left Column (Staggered Down) -->
+                    <div class="space-y-6 sm:translate-y-8">
+                        <!-- Photo 1 -->
+                        <div class="relative rounded-[30px] overflow-hidden shadow-xl h-56 border-4 border-white">
+                            <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=800&auto=format&fit=crop" class="w-full h-full object-cover" alt="Happy Patient">
+                        </div>
+                        
+                        <!-- Testimonial 1 -->
+                        <div class="bg-brand-dark rounded-[30px] p-6 shadow-2xl relative border border-white/10">
+                            <div class="absolute -top-4 -right-4 bg-brand-gold w-10 h-10 rounded-full flex items-center justify-center text-brand-dark text-3xl font-serif pt-2">"</div>
+                            <div class="flex text-brand-gold mb-3">
+                                <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                                <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                                <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                                <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                                <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            </div>
+                            <p class="text-gray-300 text-sm mb-4 leading-relaxed italic">
+                                <span class="en-inline">"They saved me thousands. The 5-star hotel, the transfers, the clinic... everything was purely luxury."</span>
+                                <span class="ar-inline">"وفروا لي الآلاف. الفندق 5 نجوم، التنقلات، العيادة... كل شيء كان فخامة خالصة."</span>
+                            </p>
+                            <div class="flex items-center gap-3">
+                                <div class="w-8 h-8 rounded-full bg-brand-gold/20 flex items-center justify-center text-brand-gold font-bold text-xs">AR</div>
+                                <div>
+                                    <div class="font-bold text-white text-xs"><span class="en-inline">Ahmed R.</span><span class="ar-inline">أحمد ر.</span></div>
+                                    <div class="text-[10px] text-brand-gold">🇦🇪 UAE / الإمارات</div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <input type="range" min="0" max="100" value="50" class="absolute inset-0 w-full h-full opacity-0 z-40 cursor-ew-resize" id="sliderRange">
-                    <div class="slider-handle" id="sliderHandle">
-                        <div class="slider-button">
-                            <i data-lucide="chevrons-left-right" class="w-5 h-5"></i>
+
+                    <!-- Right Column (Staggered Up) -->
+                    <div class="space-y-6 sm:-translate-y-8 mt-6 sm:mt-0">
+                        <!-- Testimonial 2 -->
+                        <div class="bg-white rounded-[30px] p-6 shadow-2xl relative border border-gray-100">
+                            <div class="absolute -top-4 -left-4 bg-brand-gold w-10 h-10 rounded-full flex items-center justify-center text-brand-dark text-3xl font-serif pt-2">"</div>
+                            <div class="flex text-brand-gold mb-3">
+                                <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                                <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                                <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                                <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                                <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            </div>
+                            <p class="text-gray-600 text-sm mb-4 leading-relaxed italic">
+                                <span class="en-inline">"The VIP service was beyond my expectations. My Hollywood smile looks perfectly natural!"</span>
+                                <span class="ar-inline">"كانت خدمة VIP تفوق توقعاتي. تبدو ابتسامة هوليوود طبيعية تمامًا ومذهلة!"</span>
+                            </p>
+                            <div class="flex items-center gap-3">
+                                <div class="w-8 h-8 rounded-full bg-brand-dark flex items-center justify-center text-brand-gold font-bold text-xs">SM</div>
+                                <div>
+                                    <div class="font-bold text-brand-dark text-xs"><span class="en-inline">Sarah M.</span><span class="ar-inline">سارة م.</span></div>
+                                    <div class="text-[10px] text-gray-500">🇬🇧 UK / بريطانيا</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Photo 2 -->
+                        <div class="relative rounded-[30px] overflow-hidden shadow-xl h-64 border-4 border-brand-gold">
+                            <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=800&auto=format&fit=crop" class="w-full h-full object-cover" alt="Perfect Smile">
+                            <div class="absolute bottom-4 right-4 bg-white/90 backdrop-blur text-brand-dark p-2 rounded-full shadow-lg">
+                                <i data-lucide="sparkles" class="w-5 h-5 text-brand-gold"></i>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="absolute -bottom-6 left-1/2 -translate-x-1/2 glass-dark px-6 py-2 rounded-full text-white text-[10px] font-bold tracking-widest uppercase">
-                    <span class="en-inline">Drag to see transformation</span><span class="ar-inline">اسحب لرؤية التحول</span>
+                <!-- Decorative background blur -->
+                <div class="absolute inset-0 bg-brand-gold/20 blur-[100px] -z-10 rounded-full"></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- WHY TURKEY / THE SMART INVESTMENT SECTION -->
+<section id="why-turkey" class="py-24 bg-brand-dark text-white relative overflow-hidden">
+    <!-- Background Decor -->
+    <div class="absolute top-0 left-0 w-1/2 h-full bg-brand-gold/5 blur-[150px] -z-10"></div>
+    <div class="max-w-7xl mx-auto px-6 relative z-10">
+        <div class="grid lg:grid-cols-2 gap-16 items-center">
+            <div class="reveal order-2 lg:order-1 relative">
+                <div class="relative rounded-[40px] overflow-hidden shadow-2xl h-[500px]">
+                    <img src="https://kelseyinlondon.com/wp-content/uploads/2025/01/things-to-do-in-cappadocia-hot-air-balloon-watching-tour.jpg" class="w-full h-full object-cover" alt="Cappadocia Turkey Tour">
+                    <div class="absolute inset-0 bg-gradient-to-t from-brand-dark via-transparent to-transparent"></div>
+                    
+                    <!-- Floating Savings Tag -->
+                    <div class="absolute bottom-8 left-8 right-8 bg-white/10 backdrop-blur-xl border border-white/20 p-6 rounded-3xl shadow-2xl flex items-center justify-between">
+                        <div>
+                            <div class="text-brand-gold text-xs font-bold uppercase tracking-widest mb-1"><span class="en-inline">Average Savings</span><span class="ar-inline">متوسط التوفير</span></div>
+                            <div class="text-white font-serif text-3xl font-bold">Up to 70%</div>
+                        </div>
+                        <div class="w-12 h-12 gold-gradient rounded-full flex items-center justify-center text-brand-dark">
+                            <i data-lucide="trending-down" class="w-6 h-6"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="reveal order-1 lg:order-2">
+                <span class="text-brand-gold font-bold tracking-[0.3em] uppercase text-xs mb-4 block">
+                    <span class="en-inline">The Smart Investment</span><span class="ar-inline">الاستثمار الذكي</span>
+                </span>
+                <h2 class="font-serif text-4xl md:text-5xl font-bold mb-6 leading-tight">
+                    <span class="en-text">Why pay more for <br>just a treatment?</span>
+                    <span class="ar-text">لماذا تدفع أكثر <br>مقابل العلاج فقط؟</span>
+                </h2>
+                <p class="text-gray-400 text-lg mb-10 leading-relaxed">
+                    <span class="en-text">Dental procedures in your hometown can cost a fortune for just the chair time. At Sheeny Türkiye, we flip the script. <strong>You pay significantly less, but receive so much more.</strong> <br><br>Use the thousands you save to treat yourself to world-class dentistry, a luxury 5-star hotel, VIP Mercedes transfers, and an unforgettable Anatolian holiday. It’s not just a procedure; it’s an experience of a lifetime.</span>
+                    <span class="ar-text">إجراءات طب الأسنان في مدينتك قد تكلف ثروة. في شيني تركيا، نغير هذه المعادلة. <strong>أنت تدفع أقل بكثير، وتحصل على أكثر بكثير.</strong><br><br>استخدم الآلاف التي توفرها لتدليل نفسك بطب أسنان عالمي، وفندق 5 نجوم فاخر، وتنقلات VIP، وعطلة لا تُنسى في الأناضول. إنه ليس مجرد إجراء طبي؛ إنها تجربة العمر.</span>
+                </p>
+                
+                <div class="flex flex-col gap-4">
+                    <div class="bg-white/5 border border-white/10 p-5 rounded-2xl flex items-center justify-between opacity-60">
+                        <div class="flex items-center gap-3">
+                            <i data-lucide="x-circle" class="w-5 h-5 text-red-400"></i>
+                            <span class="text-gray-300 font-medium"><span class="en-inline">Local Hometown Clinic (Treatment Only)</span><span class="ar-inline">العيادة المحلية (علاج فقط)</span></span>
+                        </div>
+                        <span class="text-white font-bold font-serif text-xl">$$$$</span>
+                    </div>
+                    <div class="gold-gradient p-5 rounded-2xl flex items-center justify-between shadow-xl shadow-brand-gold/20 transform scale-105 z-10">
+                        <div class="flex items-center gap-3">
+                            <i data-lucide="check-circle" class="w-5 h-5 text-brand-dark"></i>
+                            <span class="text-brand-dark font-bold"><span class="en-inline">Sheeny VIP Package + Luxury Holiday</span><span class="ar-inline">باقة شيني VIP + عطلة فاخرة</span></span>
+                        </div>
+                        <span class="text-brand-dark font-black font-serif text-2xl">$$</span>
+                    </div>
                 </div>
             </div>
         </div>
@@ -312,7 +425,7 @@
                     <div class="col-span-5 space-y-4 md:space-y-5 pt-8 md:pt-12">
                         <!-- VIP Transfer -->
                         <div class="relative rounded-[30px] overflow-hidden shadow-2xl h-48 md:h-56 group">
-                            <img src="https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?q=80&w=800&auto=format&fit=crop" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-1000" alt="VIP Chauffeur">
+                            <img src="https://istanbulluxurytransfer.com/wp-content/uploads/2020/08/img-gallerie_airport-transfer-sicily-luxury-cars.jpg" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-1000" alt="VIP Luxury Van Transfer">
                             <div class="absolute inset-0 bg-gradient-to-t from-brand-dark/90 via-brand-dark/20 to-transparent opacity-80 group-hover:opacity-100 transition-opacity"></div>
                             <div class="absolute bottom-5 left-5 right-5 translate-y-2 group-hover:translate-y-0 transition-transform duration-500">
                                 <span class="text-brand-gold text-[9px] font-bold uppercase tracking-widest block mb-1">Transit</span>
@@ -321,7 +434,7 @@
                         </div>
                         <!-- 5-Star Hotel -->
                         <div class="relative rounded-[30px] overflow-hidden shadow-2xl h-64 md:h-80 group">
-                            <img src="https://images.unsplash.com/photo-1582719478250-c89afe4dc68b?q=80&w=800&auto=format&fit=crop" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-1000" alt="Luxury Hotel Suite">
+                            <img src="https://images.guidedistanbultours.com/media/Four-Seasons-Hotel-Istanbul.jpg" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-1000" alt="Luxury Hotel Suite">
                             <div class="absolute inset-0 bg-gradient-to-t from-brand-dark/90 via-brand-dark/20 to-transparent opacity-80 group-hover:opacity-100 transition-opacity"></div>
                             <div class="absolute bottom-5 left-5 right-5 translate-y-2 group-hover:translate-y-0 transition-transform duration-500">
                                 <span class="text-brand-gold text-[9px] font-bold uppercase tracking-widest block mb-1">Accommodation</span>
@@ -334,7 +447,7 @@
                     <div class="col-span-7 space-y-4 md:space-y-5">
                         <!-- Cappadocia -->
                         <div class="relative rounded-[30px] overflow-hidden shadow-2xl h-64 md:h-72 group">
-                            <img src="https://images.unsplash.com/photo-1527838832700-5059252407fa?q=80&w=800&auto=format&fit=crop" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-1000" alt="Cappadocia Turkey Tour">
+                            <img src="https://hblimg.mmtcdn.com/content/hubble/img/destgalleryimages/mmt/activities/m_Antalaya_1_l_667_1000.jpg" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-1000" alt="Cappadocia Turkey Tour">
                             <div class="absolute inset-0 bg-gradient-to-t from-brand-dark/90 via-brand-dark/20 to-transparent opacity-80 group-hover:opacity-100 transition-opacity"></div>
                             <div class="absolute bottom-5 left-5 right-5 translate-y-2 group-hover:translate-y-0 transition-transform duration-500">
                                 <span class="text-brand-gold text-[9px] font-bold uppercase tracking-widest block mb-1">Excursions</span>
@@ -494,7 +607,7 @@
                         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
                         <span class="text-white">@sheeny_turkiye</span>
                     </div>
-                    <div class="flex items-center gap-3 text-brand-gold"><i data-lucide="mail" class="w-5 h-5"></i> <span class="text-white">vip@sheenyturkiye.com</span></div>
+                    <div class="flex items-center gap-3 text-brand-gold"><i data-lucide="mail" class="w-5 h-5"></i> <span class="text-white">info@sheeny.live</span></div>
                 </div>
             </div>
             
@@ -610,7 +723,7 @@
                     </li>
                     <li class="flex items-center gap-3">
                         <i data-lucide="mail" class="w-4 h-4 text-brand-gold shrink-0"></i>
-                        <a href="mailto:vip@sheenyturkiye.com" class="hover:text-brand-gold transition-colors">vip@sheenyturkiye.com</a>
+                        <a href="mailto:info@sheeny.live" class="hover:text-brand-gold transition-colors">info@sheeny.live</a>
                     </li>
                 </ul>
             </div>
